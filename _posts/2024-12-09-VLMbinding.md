@@ -6,6 +6,6 @@ image: /images/Comp_Neuro.webp
 categories: research
 author: "Kia Ghods"
 authors: "Declan Iain Campbell, Sunayana Rane, Tyler Giallanza, Nicolò De Sabbata, <strong>Kia Ghods</strong>, Amogh Joshi, Alexander Ku, Jonathan D. Cohen, Thomas L. Griffiths, Taylor Whittington Webb"
-venue: "In Review"
+venue: "NeurIPS"
 doi: https://arxiv.org/abs/2411.00238
 ---
