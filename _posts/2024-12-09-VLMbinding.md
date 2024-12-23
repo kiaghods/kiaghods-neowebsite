@@ -9,3 +9,4 @@ authors: "Declan Iain Campbell, Sunayana Rane, Tyler Giallanza, Nicolò De Sabba
 venue: "NeurIPS"
 doi: https://arxiv.org/abs/2411.00238
 ---
+We identify that state-of-the-art VLMs fail at basic multi-object reasoning due to the binding problem, which limits simultaneous entity representation, similar to human brain processing.
