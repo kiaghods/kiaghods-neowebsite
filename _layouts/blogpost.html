@@ -166,10 +166,35 @@
         font-size: 22px;
       }
       .toc-toggle {
-        left: 10px;
+        display: none; /* Hide the TOC toggle on mobile */
       }
-      .toc-toggle.active {
-        left: 250px;
+      .nav-container {
+        padding: 0 10px;
+      }
+      .back-to-blog {
+        font-size: 13px;
+        padding: 5px 8px;
+        background-color: rgba(74, 144, 226, 0.2);
+        border-radius: 4px;
+      }
+      /* Change text to just an arrow and "Blog" on mobile */
+      .back-to-blog span:first-child {
+        display: none;
+      }
+      .back-to-blog::before {
+        content: "←";
+        margin-right: 5px;
+      }
+      /* Remove the ::after pseudo-element */
+      .back-to-blog::after {
+        content: "";
+      }
+    }
+    
+    /* Extra small devices */
+    @media (max-width: 375px) {
+      .nav-container {
+        padding: 0 5px;
       }
     }
   </style>
@@ -181,8 +206,8 @@
         <a href="{{ site.baseurl }}/" style="text-decoration: none; font-size: 24px; color: #FFFFFF;">
           Kia Ghods
         </a>
-        <a href="{{ site.baseurl }}/blog" style="text-decoration: none; font-size: 16px; color: #FFFFFF;">
-          ← Back to Blog
+        <a href="{{ site.baseurl }}/blog/" class="back-to-blog" style="text-decoration: none; font-size: 16px; color: #FFFFFF;">
+          <span>← Back to</span> <span class="blog-text">Blog</span>
         </a>
       </div>
     </nav>      
