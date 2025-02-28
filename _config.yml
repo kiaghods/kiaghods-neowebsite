@@ -80,6 +80,18 @@ plugins:
       - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
     #  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
+# Configure static files in blogs directory to have blog: true metadata
+defaults:
+  - scope:
+      path: "blogs"
+    values:
+      blog: true
+      layout: blogpost
+
+# Include blogs directory in the Jekyll build
+include:
+  - blogs
+
 # Exclude these files from your production _site
 exclude:
   - Gemfile

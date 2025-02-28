@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .content-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #FFFFFF;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .content-container h1 {
+      font-size: 32px;
+      margin-top: 0;
+      line-height: 1.3;
+    }
+    .content-container h2 {
+      font-size: 26px;
+      margin-top: 30px;
+      line-height: 1.3;
+    }
+    .content-container p {
+      margin-bottom: 20px;
+    }
+    .content-container ul, .content-container ol {
+      margin-bottom: 20px;
+    }
+    .content-container li {
+      margin-bottom: 8px;
+    }
+    .content-container a {
+      color: #4A90E2;
+      text-decoration: none;
+    }
+    .content-container a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .content-container {
+        padding: 15px;
+        font-size: 16px;
+      }
+      .content-container h1 {
+        font-size: 28px;
+      }
+      .content-container h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <nav style="width: 100%; background-color: transparent; padding: 15px; font-family: 'Lato', sans-serif;">
+      <div class="nav-container" style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="{{ site.baseurl }}/" style="text-decoration: none; font-size: 24px; color: #FFFFFF;">
+          Kia Ghods
+        </a>
+        <a href="{{ site.baseurl }}/blog" style="text-decoration: none; font-size: 16px; color: #FFFFFF;">
+          ← Back to Blog
+        </a>
+      </div>
+    </nav>      
+  <div class="blob-container">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <div class="content-container">
+    {{ content }}
+  </div>
+
+  <script>
+    (function() {
+        var links = document.links;
+        for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+            if (links[i].hostname != window.location.hostname) {
+                links[i].target = '_blank';
+                links[i].rel = 'noopener noreferrer';
+            }
+        }
+    })();
+  </script>
+</body>
+
+</html> 
